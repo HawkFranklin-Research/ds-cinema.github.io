@@ -12,6 +12,12 @@ and prototype PDF invoice generation.
 > [Deployment and public launch](./DEPLOYMENT.md) before changing DNS or enabling
 > payments.
 
+The repository also includes a no-server static export for GitHub Pages. Its
+entry point is [`index.html`](./index.html), and it preserves the landing page,
+marketplace, product configuration, local demo checkout and local demo order
+history. See [GitHub Pages deployment](./GITHUB_PAGES.md) for the exact setup and
+the boundary between static hosting and the future Firebase backend.
+
 The application currently runs on [vinext](https://github.com/cloudflare/vinext)
 with Cloudflare-compatible server output, D1 and Drizzle support.
 
@@ -100,6 +106,7 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - `npm run dev`: start local development
 - `npm run build`: verify the vinext build output
+- `npm run export:github-pages`: rebuild the static GitHub Pages version
 - `npm test`: build the starter and verify its rendered loading skeleton
 - `npm run db:generate`: generate Drizzle migrations after schema changes
 

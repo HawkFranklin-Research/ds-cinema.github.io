@@ -270,11 +270,15 @@ Implementation cannot be completed safely without:
 
 ## What GitHub Pages can and cannot do
 
-GitHub Pages may host a static marketing-only export, but it cannot execute this
-application's authentication, order database, payment webhooks, protected
-invoices or shipment APIs. The complete marketplace requires Firebase App
-Hosting, Cloudflare Workers, a suitable application platform or a managed
-server.
+GitHub Pages can now host the checked-in static storefront beginning at
+`index.html`. That version includes the landing page, marketplace, product
+configuration and an explicitly local-only demo order flow. See
+`GITHUB_PAGES.md` for its file map and publishing steps.
+
+GitHub Pages still cannot execute trusted authentication, an order database,
+payment webhooks, protected invoices or shipment APIs. The complete marketplace
+requires Firebase App Hosting, Cloudflare Workers, a suitable application
+platform or a managed server.
 
 The GitHub repository remains the canonical source regardless of which public
 runtime is selected.
