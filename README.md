@@ -1,8 +1,19 @@
-# vinext-starter
+# DS Cinema
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+DS Cinema is a privacy-first autonomous indoor cinematography concept for solo
+creators. This repository contains the public product site, two-product
+marketplace prototype, authenticated checkout flow, order and shipment records,
+and prototype PDF invoice generation.
+
+> [!IMPORTANT]
+> The current OpenAI Sites deployment is a private, workspace-restricted
+> preview. It cannot presently be published to the general internet or attached
+> to `dscinema.hawkfranklin.in` from the current workspace. Read
+> [Deployment and public launch](./DEPLOYMENT.md) before changing DNS or enabling
+> payments.
+
+The application currently runs on [vinext](https://github.com/cloudflare/vinext)
+with Cloudflare-compatible server output, D1 and Drizzle support.
 
 ## Prerequisites
 
