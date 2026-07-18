@@ -1,0 +1,110 @@
+/* Mobile-first DS Cinema investor reel. Loaded after investor-scroll.css. */
+html,body{height:100%;overflow:hidden;background:#050505}
+body{display:grid;place-items:center}
+.mobile-deck{
+  width:min(100vw,430px);
+  height:100dvh;
+  max-height:932px;
+  margin:0 auto;
+  box-shadow:0 0 90px rgba(0,0,0,.58);
+  overflow:hidden;
+  isolation:isolate;
+}
+.mobile-deck .deck-reel{
+  width:100%;
+  height:100%;
+  scroll-snap-type:y mandatory;
+  scroll-behavior:smooth;
+  touch-action:pan-y;
+  overscroll-behavior-y:contain;
+  -webkit-overflow-scrolling:touch;
+}
+.mobile-deck .deck-scene{width:100%;height:100%;min-height:100%;scroll-snap-align:start;scroll-snap-stop:always}
+.mobile-deck .deck-scene-inner{width:100%;height:100%;min-height:100%;padding:calc(72px + env(safe-area-inset-top)) 54px calc(24px + env(safe-area-inset-bottom)) 20px}
+.mobile-deck .deck-topbar{
+  top:0;
+  width:min(100vw,430px);
+  height:calc(66px + env(safe-area-inset-top));
+  padding:calc(14px + env(safe-area-inset-top)) 16px 10px;
+  grid-template-columns:106px 1fr 43px;
+  gap:8px;
+}
+.mobile-deck .deck-brand{gap:8px;font-size:14px}.mobile-deck .deck-brand-mark{width:29px;height:29px;font-size:8px}
+.mobile-deck .deck-progress{gap:3px}.mobile-deck .deck-progress button{height:18px;padding:8px 0}.mobile-deck .deck-progress button>span{height:2px}
+.mobile-deck .deck-counter{font-size:7px;letter-spacing:.08em}
+.mobile-deck .deck-actions{right:max(12px,calc((100vw - 430px)/2 + 12px));bottom:calc(16px + env(safe-area-inset-bottom));gap:8px}
+.mobile-deck .deck-actions button,.mobile-deck .deck-actions a{width:41px;height:41px;background:rgba(10,10,10,.74)}
+.mobile-deck .deck-actions svg{width:17px}.mobile-deck .deck-toast{bottom:calc(20px + env(safe-area-inset-bottom));font-size:11px}
+.mobile-deck .deck-kicker{margin-bottom:13px;font-size:8px;letter-spacing:.16em}.mobile-deck .deck-kicker::before{width:24px;margin-right:9px}
+.mobile-deck .deck-scene h1{font-size:clamp(50px,14.3vw,61px);line-height:.9;letter-spacing:-.075em}
+.mobile-deck .deck-scene h2{font-size:clamp(39px,10.9vw,47px);line-height:.94;letter-spacing:-.071em}
+.mobile-deck .deck-lede{font-size:13px;line-height:1.48}.mobile-deck .deck-reveal{transition-duration:.52s;transform:translateY(18px)}
+.mobile-deck .is-active .deck-reveal:nth-child(2){transition-delay:45ms}.mobile-deck .is-active .deck-reveal:nth-child(3){transition-delay:90ms}.mobile-deck .is-active .deck-reveal:nth-child(4){transition-delay:135ms}
+
+/* 01 — cover */
+.mobile-deck .deck-cover-copy{justify-content:flex-end;padding-bottom:calc(58px + env(safe-area-inset-bottom))}
+.mobile-deck .deck-cover-stage{inset:0;opacity:.73}.mobile-deck .deck-cover::after{background:linear-gradient(0deg,rgba(10,10,9,.98) 0%,rgba(10,10,9,.8) 48%,rgba(10,10,9,.15) 83%)}
+.mobile-deck .deck-cover-stage>.deck-drone{right:-23px;top:13%;scale:.63;transform-origin:top right}.mobile-deck .deck-person{right:26%;bottom:30%;scale:.62;transform-origin:bottom}.mobile-deck .deck-focus-frame{right:20%;bottom:28%;width:152px;height:315px}.mobile-deck .deck-flight-path{top:13%;left:7%;width:84%;height:51%}
+.mobile-deck .deck-cover h1{margin-bottom:21px}.mobile-deck .deck-cover-points{gap:6px;margin-top:17px}.mobile-deck .deck-cover-points span{padding:7px 7px;font-size:6.5px}.mobile-deck .deck-scroll-cue{margin-top:22px;font-size:11px}.mobile-deck .deck-scroll-cue svg{width:23px;height:23px}
+.mobile-deck .is-active .deck-flight-path{animation:mobileOrbitIn 1s cubic-bezier(.2,.8,.2,1) both}
+
+/* 02 — problem */
+.mobile-deck .deck-problem .deck-scene-inner{display:grid;grid-template-rows:auto minmax(250px,36dvh);gap:17px;align-content:center}
+.mobile-deck .deck-problem h2{font-size:clamp(41px,11.3vw,49px);margin-bottom:15px}.mobile-deck .deck-problem .deck-lede{max-width:310px}.mobile-deck .deck-tag-row{gap:5px;margin-top:16px}.mobile-deck .deck-tag-row span{padding:7px 7px;font-size:6.5px}
+.mobile-deck .deck-problem-visual{width:100%;min-height:0;height:100%}.mobile-deck .deck-phone-rig{left:7%;bottom:3%;scale:.58;transform-origin:left bottom}.mobile-deck .deck-adjusting-person{right:-6%;bottom:2%;scale:.58;transform-origin:right bottom}.mobile-deck .deck-retake-loop{right:10px;bottom:8px;scale:.75;transform-origin:right bottom}
+.mobile-deck .is-active .deck-phone{animation:mobileRecord .75s ease .35s both}.mobile-deck .is-active .deck-adjusting-person b{animation:mobileAdjust 1.8s ease-in-out .55s infinite}
+
+/* 03 — why now */
+.mobile-deck .deck-now-layout{display:flex;flex-direction:column;justify-content:center;gap:12px}.mobile-deck .deck-now h2{font-size:clamp(39px,10.5vw,45px);margin-bottom:0}.mobile-deck .deck-now-split{order:2;width:100%;height:28dvh;min-height:215px}.mobile-deck .deck-now-split>div{padding:14px}.mobile-deck .deck-now-split>div>span{font-size:6px}.mobile-deck .deck-now-split small{display:block;left:13px;bottom:12px;font-size:6px;line-height:1.45}.mobile-deck .deck-mini-phone{top:27%;left:25%;scale:.48}.mobile-deck .deck-light-stick{top:18%;height:165px}.mobile-deck .deck-studio-rig{inset:25% 13% 16%}.mobile-deck .deck-studio-rig i{width:35px;height:58px}.mobile-deck .deck-studio-rig b{height:93px;width:36px}
+.mobile-deck .deck-market-metrics{order:3}.mobile-deck .deck-market-metrics>div{padding:11px 8px 8px 0}.mobile-deck .deck-market-metrics>div+div{padding-left:14px}.mobile-deck .deck-market-metrics strong{font-size:31px}.mobile-deck .deck-market-metrics span{font-size:7.5px}.mobile-deck .deck-market-metrics small{padding-top:7px;font-size:6.5px}
+.mobile-deck .is-active .deck-setup-half{animation:mobileHalfLeft .6s ease both}.mobile-deck .is-active .deck-studio-half{animation:mobileHalfRight .6s ease both}.mobile-deck .is-active .deck-market-metrics strong{animation:mobileMetric .5s cubic-bezier(.2,.9,.2,1) .35s both}
+
+/* 04 — hardware */
+.mobile-deck .deck-hardware .deck-scene-inner{display:flex;flex-direction:column;justify-content:center}.mobile-deck .deck-section-heading{display:block}.mobile-deck .deck-section-heading h2{font-size:clamp(39px,10.5vw,45px)}.mobile-deck .deck-section-heading .deck-lede{margin-top:12px;font-size:11px}.mobile-deck .deck-hardware-grid{grid-template-columns:1fr 1fr;height:39dvh;min-height:300px;margin-top:18px;gap:6px}.mobile-deck .deck-proof-stamp{display:none}.mobile-deck .deck-device-card{display:flex;flex-direction:column;padding:10px}.mobile-deck .deck-card-index{top:9px;left:9px;font-size:5px}.mobile-deck .deck-device-orbit{min-height:155px}.mobile-deck .deck-device-orbit::before{width:112px;height:112px}.mobile-deck .deck-device-orbit .deck-drone-small{scale:.63}.mobile-deck .deck-device-card h3{margin-top:auto;font-size:20px}.mobile-deck .deck-device-card p{font-size:7.5px}.mobile-deck .deck-device-card ul{display:none}
+.mobile-deck .is-active .deck-device-card:first-child{animation:mobileCardLeft .58s ease .1s both}.mobile-deck .is-active .deck-device-card:nth-child(2){animation:mobileCardRight .58s ease .18s both}
+
+/* 05 — market gap */
+.mobile-deck .deck-gap-layout{display:grid;grid-template-rows:auto minmax(270px,36dvh);gap:16px;align-content:center}.mobile-deck .deck-gap h2{font-size:clamp(45px,12.3vw,53px);margin-bottom:15px}.mobile-deck .deck-gap .deck-lede{font-size:12px}.mobile-deck .deck-position-map{height:100%;min-height:0}.mobile-deck .deck-map-grid{inset:32px 9px 35px 31px}.mobile-deck .deck-axis-label{font-size:5.5px}.mobile-deck .deck-axis-label.axis-top{top:12px;left:31px}.mobile-deck .deck-axis-label.axis-bottom{bottom:12px;left:31px}.mobile-deck .deck-axis-label.axis-left{left:0;bottom:38px}.mobile-deck .deck-axis-label.axis-right{right:0;bottom:38px}.mobile-deck .deck-map-dot{padding:4px;font-size:5.5px}.mobile-deck .dot-ds{right:-2px;top:0;width:83px;height:83px}.mobile-deck .dot-ds b{font-size:27px}.mobile-deck .dot-ds small{bottom:11px;font-size:4px}.mobile-deck .dot-dji{left:14%}.mobile-deck .dot-hover{left:34%}.mobile-deck .dot-tripod{right:20%}
+
+/* 06 — solution */
+.mobile-deck .deck-solution-layout{display:grid;grid-template-rows:auto minmax(245px,32dvh);gap:14px;align-content:center}.mobile-deck .deck-solution h2{font-size:clamp(38px,10.3vw,44px);margin-bottom:0}.mobile-deck .deck-three-words{margin-top:15px}.mobile-deck .deck-three-words span{padding:6px 0;font-size:16px}.mobile-deck .deck-privacy-note{margin-top:12px;font-size:5.7px}.mobile-deck .deck-privacy-note i{width:6px;height:6px}.mobile-deck .deck-ecosystem{height:100%;min-height:0}.mobile-deck .deck-eco-drone{scale:.49;transform-origin:top left;left:5%;top:6%}.mobile-deck .deck-eco-phone{scale:.5;transform-origin:top right;right:4%;top:7%}.mobile-deck .deck-eco-laptop{scale:.45;transform-origin:bottom left;left:5%;bottom:7%}.mobile-deck .deck-local-loop{right:4%;bottom:3%;font-size:5px}
+.mobile-deck .is-active .deck-data-line{animation:mobileDataLine .8s ease .3s both}.mobile-deck .is-active .deck-eco-phone{animation:mobilePhoneFloat 3s ease-in-out .5s infinite}
+
+/* 07 — shots */
+.mobile-deck .deck-shots .deck-scene-inner{display:flex;flex-direction:column;justify-content:center}.mobile-deck .deck-shots .deck-section-heading h2{font-size:clamp(39px,10.8vw,46px)}.mobile-deck .deck-shots .deck-section-heading .deck-lede{font-size:11px}.mobile-deck .deck-shot-grid{grid-template-columns:repeat(3,1fr);height:auto;margin-top:20px;gap:5px}.mobile-deck .deck-shot-card{padding:10px}.mobile-deck .deck-shot-card>span{font-size:6px}.mobile-deck .deck-room-diagram{height:130px;min-height:0}.mobile-deck .deck-shot-card h3{min-height:34px;margin:9px 0 0;font-size:14px;line-height:1.05}.mobile-deck .deck-shot-card p{display:none}.mobile-deck .subject-dot{width:37px;height:37px}.mobile-deck .camera-dot{width:13px;height:13px}.mobile-deck .deck-safety-line{margin-top:15px;font-size:5px}.mobile-deck .deck-safety-line span{display:inline!important}.mobile-deck .deck-safety-line i{display:block;width:3px;height:3px}
+.mobile-deck .is-active .cam-arc{animation:mobileArc 2.2s ease-in-out .4s infinite}.mobile-deck .is-active .cam-slide{animation:mobileSlide 2.2s ease-in-out .4s infinite}.mobile-deck .is-active .cam-reveal{animation:mobileReveal 2.2s ease-in-out .4s infinite}
+
+/* 08 — business and ask */
+.mobile-deck .deck-ask-layout{display:flex;flex-direction:column;justify-content:center;gap:11px}.mobile-deck .deck-ask h2{font-size:clamp(37px,10.1vw,43px);margin-bottom:14px}.mobile-deck .deck-ask .deck-lede{font-size:11.5px}.mobile-deck .deck-contact-cta{width:100%;margin-top:15px;padding:12px 13px;font-size:10px}.mobile-deck .deck-funnel{display:grid;width:100%;margin-top:2px}.mobile-deck .deck-funnel>div{padding:8px 13px}.mobile-deck .deck-funnel span{margin-bottom:3px;font-size:5px}.mobile-deck .deck-funnel strong{font-size:7px}.mobile-deck .funnel-mid{width:82%}.mobile-deck .funnel-core{width:58%}
+.mobile-deck .deck-ask-panel{width:100%;padding:12px 13px}.mobile-deck .deck-ask-panel>span{font-size:6px}.mobile-deck .deck-ask-panel>div{grid-template-columns:repeat(3,1fr);gap:5px;margin:8px 0}.mobile-deck .deck-ask-panel strong{padding-right:5px;border-right:1px solid rgba(241,236,222,.18);font-size:7px}.mobile-deck .deck-ask-panel p{font-size:6.5px}.mobile-deck .deck-ask-panel>b{float:right;display:inline;margin:0;font-size:5.5px}.mobile-deck .deck-footer{width:100%;margin-top:1px;padding-top:8px;font-size:5.5px}
+.mobile-deck .is-active .deck-funnel>div{animation:mobileFunnel .48s ease both}.mobile-deck .is-active .deck-funnel>div:nth-child(2){animation-delay:.08s}.mobile-deck .is-active .deck-funnel>div:nth-child(3){animation-delay:.16s}
+
+@keyframes mobileOrbitIn{from{opacity:0;scale:.76;rotate:-8deg}to{opacity:1;scale:1;rotate:0}}
+@keyframes mobileRecord{from{filter:grayscale(1);scale:.92}to{filter:none;scale:1}}
+@keyframes mobileAdjust{0%,100%{rotate:0deg}50%{rotate:-8deg}}
+@keyframes mobileHalfLeft{from{transform:translateX(-20px);opacity:0}to{transform:none;opacity:1}}
+@keyframes mobileHalfRight{from{transform:translateX(20px);opacity:0}to{transform:none;opacity:1}}
+@keyframes mobileMetric{from{transform:scale(.8);opacity:0}to{transform:none;opacity:1}}
+@keyframes mobileCardLeft{from{transform:translateX(-18px);opacity:0}to{transform:none;opacity:1}}
+@keyframes mobileCardRight{from{transform:translateX(18px);opacity:0}to{transform:none;opacity:1}}
+@keyframes mobileDataLine{from{scale:0 1}to{scale:1 1}}
+@keyframes mobilePhoneFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@keyframes mobileArc{0%,100%{right:23%;top:23%}50%{right:57%;top:68%}}
+@keyframes mobileSlide{0%,100%{left:13%}50%{left:76%}}
+@keyframes mobileReveal{0%,100%{right:22%;top:18%}50%{right:48%;top:68%}}
+@keyframes mobileFunnel{from{transform:translateY(8px);opacity:0}to{transform:none;opacity:1}}
+
+@media(min-width:600px){
+  body::before{content:"DS CINEMA / MOBILE INVESTOR REEL";position:fixed;left:32px;bottom:32px;color:rgba(255,255,255,.22);font:600 8px "Geist Mono",monospace;letter-spacing:.16em;writing-mode:vertical-rl;transform:rotate(180deg)}
+  .mobile-deck{border-inline:1px solid rgba(255,255,255,.11)}
+}
+@media(max-height:720px){
+  .mobile-deck .deck-scene-inner{padding-top:calc(65px + env(safe-area-inset-top));padding-bottom:calc(18px + env(safe-area-inset-bottom))}
+  .mobile-deck .deck-scene h1{font-size:47px}.mobile-deck .deck-scene h2{font-size:37px}
+  .mobile-deck .deck-problem .deck-scene-inner{grid-template-rows:auto minmax(215px,32dvh)}
+  .mobile-deck .deck-now-split{min-height:185px}.mobile-deck .deck-hardware-grid{min-height:270px}.mobile-deck .deck-gap-layout{grid-template-rows:auto minmax(235px,33dvh)}
+  .mobile-deck .deck-solution-layout{grid-template-rows:auto minmax(215px,29dvh)}.mobile-deck .deck-room-diagram{height:105px}
+}
+@media(prefers-reduced-motion:reduce){
+  .mobile-deck *,.mobile-deck *::before,.mobile-deck *::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
