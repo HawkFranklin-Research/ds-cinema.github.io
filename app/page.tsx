@@ -1,6 +1,9 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Link from "next/link";
+import { ProductVisual } from "../components/ProductVisual";
+import { formatEuro, products } from "../lib/catalog";
 
 const features = [
   {
@@ -77,7 +80,8 @@ export default function Home() {
           <a href="#system" onClick={closeMenu}>System</a>
           <a href="#workflow" onClick={closeMenu}>How it works</a>
           <a href="#principles" onClick={closeMenu}>Principles</a>
-          <a href="#pilot" className="nav-cta" onClick={closeMenu}>Join the pilot <span>↗</span></a>
+          <Link href="/shop" onClick={closeMenu}>Marketplace</Link>
+          <Link href="/shop" className="nav-cta" onClick={closeMenu}>Order now <span>↗</span></Link>
         </nav>
         <button
           className="menu-button"
@@ -100,7 +104,7 @@ export default function Home() {
             A privacy-first flying camera that maps your room, plans the shot, and films you—hands-free.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#pilot">Join the pilot <span>↗</span></a>
+            <Link className="button button-primary" href="/shop">Explore the cameras <span>↗</span></Link>
             <a className="text-link" href="#concept"><span className="play-mini">▶</span> Watch the concept</a>
           </div>
         </div>
@@ -217,6 +221,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="landing-market section-pad" id="marketplace">
+        <div className="landing-market-heading">
+          <div><p className="section-kicker">DS Cinema marketplace</p><h2>Choose your<br />camera crew.</h2></div>
+          <div><p>Two creator systems. One autonomous directing platform. Configure your camera for the way you work.</p><Link href="/shop">View the marketplace <span>↗</span></Link></div>
+        </div>
+        <div className="landing-product-grid">
+          {products.map((product) => (
+            <article key={product.slug} className="landing-product-card">
+              <ProductVisual accent={product.accent} compact />
+              <div className="landing-product-info"><p>{product.badge}</p><h3>{product.name}</h3><span>{product.tagline}</span><div><b>{formatEuro(product.priceCents)}</b><small>excl. VAT</small><Link href={`/shop/${product.slug}`}>Configure <i>↗</i></Link></div></div>
+            </article>
+          ))}
+        </div>
+        <p className="market-prototype-note">Prototype preorder experience · No live payment is collected yet · Specifications and delivery dates are provisional</p>
+      </section>
+
       <section className="pilot section-pad" id="pilot">
         <div className="pilot-copy">
           <p className="section-kicker">Early flight program / 2026</p>
@@ -258,6 +278,8 @@ export default function Home() {
           <a href="#system">System</a>
           <a href="#workflow">How it works</a>
           <a href="#principles">Privacy</a>
+          <Link href="/shop">Marketplace</Link>
+          <Link href="/account">My orders</Link>
         </div>
         <p className="copyright">© 2026 DS Cinema. Concept in development.</p>
       </footer>
