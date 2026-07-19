@@ -32,8 +32,9 @@ body:has(.deck-page) { overflow: hidden; background: #0b0b0c; }
 /* fixed navigation */
 .deck-topbar{position:fixed;z-index:80;top:0;left:50%;width:min(100%,1500px);height:82px;padding:19px clamp(22px,4vw,62px);transform:translateX(-50%);display:grid;grid-template-columns:170px 1fr 70px;align-items:center;gap:34px;color:var(--deck-paper);transition:color .25s ease;pointer-events:none}
 .deck-tone-1,.deck-tone-2,.deck-tone-5,.deck-tone-6{color:var(--deck-ink)}
-.deck-brand{display:inline-flex;align-items:center;gap:10px;width:max-content;padding:0;border:0;background:transparent;font-weight:650;letter-spacing:-.04em;cursor:pointer;pointer-events:auto}
-.deck-brand-mark{display:grid;place-items:center;width:31px;height:31px;border:1px solid currentColor;font:650 9px var(--font-geist-mono),monospace}
+.deck-brand{display:inline-flex;align-items:center;gap:8px;width:max-content;padding:0;border:0;background:transparent;font-weight:650;letter-spacing:-.04em;cursor:pointer;pointer-events:auto}
+.deck-brand-logo{display:block;width:46px;height:31px;object-fit:contain;flex:none;filter:drop-shadow(0 0 10px rgba(69,207,235,.1))}
+.deck-brand-word{color:currentColor;font-size:15px;font-weight:620;line-height:1;letter-spacing:-.045em}
 .deck-progress{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;pointer-events:auto}.deck-progress button{height:16px;padding:6px 0;border:0;background:transparent;cursor:pointer}
 .deck-progress button>span{display:block;height:2px;background:currentColor;opacity:.2;overflow:hidden}.deck-progress button>span::after{content:"";display:block;width:0;height:100%;background:currentColor;transition:width .35s ease}
 .deck-progress button.active>span,.deck-progress button.seen>span{opacity:.9}.deck-progress button.active>span::after,.deck-progress button.seen>span::after{width:100%}
@@ -124,7 +125,7 @@ body:has(.deck-page) { overflow: hidden; background: #0b0b0c; }
 .deck-footer{grid-column:1/-1;display:flex;justify-content:space-between;padding-top:14px;border-top:1px solid rgba(241,236,222,.16);color:#77756e;font:600 8px var(--font-geist-mono),monospace;text-transform:uppercase;letter-spacing:.08em}
 
 @media(max-width:900px){
- .deck-topbar{height:72px;grid-template-columns:112px 1fr 49px;gap:11px;padding:15px 17px}.deck-brand{font-size:14px}.deck-brand-mark{width:28px;height:28px}.deck-progress{gap:3px}.deck-counter{font-size:8px}.deck-actions{right:15px;bottom:18px}.deck-actions button,.deck-actions a{width:39px;height:39px}
+ .deck-topbar{height:72px;grid-template-columns:112px 1fr 49px;gap:11px;padding:15px 17px}.deck-brand-logo{width:40px;height:27px}.deck-brand-word{font-size:14px}.deck-progress{gap:3px}.deck-counter{font-size:8px}.deck-actions{right:15px;bottom:18px}.deck-actions button,.deck-actions a{width:39px;height:39px}
  .deck-scene{min-height:100svh;height:auto}.deck-scene-inner{min-height:100svh;height:auto;padding:88px 62px 40px 20px}.deck-scene h1{font-size:clamp(57px,16vw,82px)}.deck-scene h2{font-size:clamp(45px,12vw,69px)}
  .deck-split-layout,.deck-gap-layout,.deck-solution-layout{grid-template-columns:1fr;gap:28px;align-content:center}
  .deck-cover-stage{inset:0;opacity:.7}.deck-cover::after{background:linear-gradient(0deg,rgba(10,10,9,.97) 0%,rgba(10,10,9,.71) 59%,rgba(10,10,9,.24))}.deck-cover-copy{justify-content:flex-end;padding-bottom:65px}.deck-cover-stage>.deck-drone{right:4%;top:17%;transform:scale(.68);transform-origin:top right}.deck-person{right:31%;bottom:28%;transform:scale(.7);transform-origin:bottom}.deck-focus-frame{right:24%;bottom:27%;width:155px;height:330px}.deck-tripod{display:none}.deck-cover-points{flex-wrap:wrap;margin-top:18px}.deck-cover-points span{font-size:8px;padding:7px 8px}.deck-scroll-cue{margin-top:24px}
@@ -147,4 +148,3 @@ body:has(.deck-page) { overflow: hidden; background: #0b0b0c; }
 }
 @media(max-height:720px) and (min-width:901px){.deck-scene-inner{padding-top:90px;padding-bottom:32px}.deck-scene h1{font-size:clamp(58px,6.8vw,97px)}.deck-scene h2{font-size:clamp(46px,5.2vw,76px)}.deck-hardware-grid{height:43vh}.deck-shot-grid{height:39vh}.deck-position-map{height:60vh}.deck-ecosystem{height:61vh}}
 @media(prefers-reduced-motion:reduce){.deck-page *,.deck-page *::before,.deck-page *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.deck-reveal{opacity:1;transform:none}}
-

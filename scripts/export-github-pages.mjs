@@ -10,7 +10,7 @@ const assetsRoot = join(projectRoot, "assets");
 const siteUrl = "https://hawkfranklin-research.github.io/ds-cinema.github.io";
 
 const pages = [
-  { route: "/", output: "index.html", root: "./", page: "home" },
+  { route: "/", output: "index-storefront-backup.html", root: "./", page: "home" },
   { route: "/shop", output: "shop/index.html", root: "../", page: "shop" },
   { route: "/shop/creator-air", output: "shop/creator-air/index.html", root: "../../", page: "product", slug: "creator-air", price: 49900 },
   { route: "/shop/creator-air-pro", output: "shop/creator-air-pro/index.html", root: "../../", page: "product", slug: "creator-air-pro", price: 79900 },
@@ -110,6 +110,15 @@ function sanitize(input, page) {
     "</head>",
     `<link rel="icon" href="${page.root}assets/favicon.svg"><link rel="stylesheet" href="${page.root}assets/styles.css"><script defer src="${page.root}assets/site.js"></script></head>`,
   );
+
+  if (page.output === "index-storefront-backup.html") {
+    html = html
+      .replace(
+        "<!DOCTYPE html>",
+        "<!DOCTYPE html><!-- DS Cinema storefront homepage backup; not the active root page. -->",
+      )
+      .replace("</head>", '<meta name="robots" content="noindex,nofollow"></head>');
+  }
 
   html = html.replace(/[ \t]+$/gm, "");
 

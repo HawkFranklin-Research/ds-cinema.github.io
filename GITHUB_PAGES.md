@@ -6,7 +6,8 @@ visitor runtime.
 
 ## What is included
 
-- `index.html` — landing page
+- `index.html` — active investor scroll-deck homepage
+- `index-storefront-backup.html` — preserved original storefront homepage
 - `shop/index.html` — marketplace
 - `shop/creator-air/index.html` — Creator Air product page
 - `shop/creator-air-pro/index.html` — Creator Air Pro product page
@@ -57,8 +58,9 @@ file must never contain those secrets.
 
 ## Regenerating the static version
 
-The checked-in HTML is generated from the existing application so both versions
-retain the same content and design. After changing the React/vinext pages, run:
+The marketplace HTML is generated from the existing application so both
+versions retain the same content and design. The investor homepage is maintained
+as a standalone page. After changing the React/vinext pages, run:
 
 ```bash
 npm install
@@ -67,8 +69,10 @@ npm run export:github-pages
 
 This performs the application build, renders the public routes, removes the
 server/React runtime, rewrites internal links for a GitHub project site and
-updates the static files. Node.js is required only for this development-time
-regeneration step, not for the deployed GitHub Pages website.
+updates the static marketplace files. The generated storefront homepage is
+written to `index-storefront-backup.html`, so the investor `index.html` is not
+overwritten. Node.js is required only for this development-time regeneration
+step, not for the deployed GitHub Pages website.
 
 ## Enabling GitHub Pages later
 

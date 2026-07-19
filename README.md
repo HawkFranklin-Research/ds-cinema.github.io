@@ -13,10 +13,12 @@ and prototype PDF invoice generation.
 > payments.
 
 The repository also includes a no-server static export for GitHub Pages. Its
-entry point is [`index.html`](./index.html), and it preserves the landing page,
-marketplace, product configuration, local demo checkout and local demo order
-history. See [GitHub Pages deployment](./GITHUB_PAGES.md) for the exact setup and
-the boundary between static hosting and the future Firebase backend.
+entry point is the investor story in [`index.html`](./index.html), with the
+original storefront homepage retained as
+[`index-storefront-backup.html`](./index-storefront-backup.html). The marketplace,
+product configuration, local demo checkout and local demo order history remain
+available. See [GitHub Pages deployment](./GITHUB_PAGES.md) for the exact setup
+and the boundary between static hosting and the future Firebase backend.
 
 The application currently runs on [vinext](https://github.com/cloudflare/vinext)
 with Cloudflare-compatible server output, D1 and Drizzle support.

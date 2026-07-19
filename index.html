@@ -1,130 +1,525 @@
-<!DOCTYPE html><html lang="en" data-static-root="./" data-page="home"><head>
-
-
-
-
-
-
-
-<meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>DS Cinema — Your camera operator. In the air.</title><meta name="description" content="A privacy-first autonomous indoor camera for solo creators."/><meta property="og:title" content="DS Cinema — Your camera operator. In the air."/><meta property="og:description" content="A privacy-first autonomous indoor camera for solo creators."/><meta property="og:image" content="https://hawkfranklin-research.github.io/ds-cinema.github.io/assets/og.png"/><meta property="og:image:width" content="1728"/><meta property="og:image:height" content="909"/><meta property="og:image:alt" content="DS Cinema autonomous flying camera"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="DS Cinema — Your camera operator. In the air."/><meta name="twitter:description" content="A privacy-first autonomous indoor camera for solo creators."/><meta name="twitter:image" content="https://hawkfranklin-research.github.io/ds-cinema.github.io/assets/og.png"/>
-
-
-
-
-
-
-
-
-
-
-
-<style data-vinext-fonts>/* cyrillic-ext */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-.__font_geist_0tvmz3h { font-family: 'Geist', sans-serif; }
-
-.__variable_geist_0tvmz3h { --font-geist-sans: 'Geist', sans-serif; }
-
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* symbols2 */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
-  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-.__font_geist_mono_1diim1n { font-family: 'Geist Mono', sans-serif; }
-
-.__variable_geist_mono_1diim1n { --font-geist-mono: 'Geist Mono', sans-serif; }
-</style>
-<link rel="icon" href="./assets/favicon.svg"><link rel="stylesheet" href="./assets/styles.css"><script defer src="./assets/site.js"></script></head><body><main><header class="site-header"><a class="brand" href="#top" aria-label="DS Cinema home"><span class="brand-mark">DS</span><span>cinema</span></a><nav class="nav-links" aria-label="Main navigation"><a href="#system">System</a><a href="#workflow">How it works</a><a href="#principles">Principles</a><a href="./shop/">Marketplace</a><a href="./shop/" class="nav-cta">Order now <span>↗</span></a></nav><button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button></header><section class="hero" id="top"><div class="hero-grid" aria-hidden="true"></div><div class="hero-copy"><p class="eyebrow"><span></span> Autonomous cinematography</p><h1>Your camera<br/>operator.<br/><em>In the air.</em></h1><p class="hero-description">A privacy-first flying camera that maps your room, plans the shot, and films you—hands-free.</p><div class="hero-actions"><a href="./shop/" class="button button-primary">Explore the cameras <span>↗</span></a><a class="text-link" href="#concept"><span class="play-mini">▶</span> Watch the concept</a></div></div><div class="hero-visual" id="concept"><div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div><div class="visual-crosshair"></div><div class="drone" aria-hidden="true"><span class="drone-arm arm-left"></span><span class="drone-arm arm-right"></span><span class="drone-rotor rotor-one"></span><span class="drone-rotor rotor-two"></span><span class="drone-rotor rotor-three"></span><span class="drone-rotor rotor-four"></span><span class="drone-body"><i></i></span></div><div class="telemetry telemetry-top"><span>SHOT / 04</span><strong>ORBIT SLOW</strong></div><div class="telemetry telemetry-right"><span>SUBJECT LOCK</span><strong>98.4%</strong></div><div class="telemetry telemetry-bottom"><span>SAFE VOLUME</span><strong>2.8 × 3.4 M</strong></div><div class="visual-label"><span class="status-dot"></span> FUTURE PRODUCT FILM</div><p class="coordinates">X 02.140 / Y 01.880 / Z 01.520</p></div><div class="hero-footer"><p>Built for solo creators.</p><div class="hero-proof"><span><i></i> Room-aware</span><span><i></i> Director AI</span><span><i></i> Local by design</span></div></div></section><section class="statement section-pad" id="system"><p class="section-kicker">The missing crew member</p><h2>More than a drone.<br/><span>A director that moves.</span></h2><p class="statement-copy">Most self-flying cameras only ask where you are. DS Cinema understands what you&#x27;re creating—then finds the angle, protects the frame, and gives every take motion.</p><div class="feature-grid"><article class="feature-card"><span>01</span><div class="feature-icon" aria-hidden="true"><i></i><b></b></div><h3>Room-aware</h3><p>Scan once. DS Cinema understands the set, respects no-fly zones, and plans only safe camera paths.</p></article><article class="feature-card"><span>02</span><div class="feature-icon" aria-hidden="true"><i></i><b></b></div><h3>Director AI</h3><p>Choose a mood, not a flight path. The system selects framing, movement, and timing for every take.</p></article><article class="feature-card"><span>03</span><div class="feature-icon" aria-hidden="true"><i></i><b></b></div><h3>Local by design</h3><p>Your footage and scene intelligence stay on your devices. No automatic uploads. No surprise cloud processing.</p></article></div></section><section class="workflow section-pad" id="workflow"><div class="workflow-heading"><p class="section-kicker">One room. Infinite coverage.</p><h2>From space to shot<br/>in four simple steps.</h2></div><div class="workflow-layout"><div class="media-placeholder workflow-media" aria-label="Room scan in motion media placeholder"><div class="placeholder-grid"></div><div class="frame-corners"></div><span class="media-index">01 / 04</span><div class="media-copy"><span class="play-dot" aria-hidden="true"></span><div><strong>Room scan in motion</strong><small>FUTURE PRODUCT FILM / IMAGE</small></div></div><span class="media-status">PLACEHOLDER</span></div><ol class="step-list"><li><span>0<!-- -->1</span><div><h3>Map the room</h3><p>Mark the set, mirrors, lights, and the places the camera should never enter.</p></div></li><li><span>0<!-- -->2</span><div><h3>Set the scene</h3><p>Pick a shot style—from a slow orbit to a precise full-body tracking move.</p></div></li><li><span>0<!-- -->3</span><div><h3>Perform freely</h3><p>Start with a gesture or voice cue. DS Cinema captures repeatable coverage while you stay in the moment.</p></div></li><li><span>0<!-- -->4</span><div><h3>Keep the best</h3><p>Review a ready-to-edit selection of stable, well-framed takes in vertical and landscape formats.</p></div></li></ol></div></section><section class="shot-library section-pad"><div class="library-header"><div><p class="section-kicker">Shot library</p><h2>Direct the feeling.<br/>We&#x27;ll plan the flight.</h2></div><p>Choose a cinematic intent. Each preset adapts to your room, your movement, and your publishing format.</p></div><div class="media-grid"><div class="media-placeholder media-tall" aria-label="Intimate focus media placeholder"><div class="placeholder-grid"></div><div class="frame-corners"></div><span class="media-index">01</span><div class="media-copy"><span class="play-dot" aria-hidden="true"></span><div><strong>Intimate focus</strong><small>FUTURE PRODUCT FILM / IMAGE</small></div></div><span class="media-status">PLACEHOLDER</span></div><div class="media-placeholder " aria-label="Editorial orbit media placeholder"><div class="placeholder-grid"></div><div class="frame-corners"></div><span class="media-index">02</span><div class="media-copy"><span class="play-dot" aria-hidden="true"></span><div><strong>Editorial orbit</strong><small>FUTURE PRODUCT FILM / IMAGE</small></div></div><span class="media-status">PLACEHOLDER</span></div><div class="media-placeholder " aria-label="Full-body track media placeholder"><div class="placeholder-grid"></div><div class="frame-corners"></div><span class="media-index">03</span><div class="media-copy"><span class="play-dot" aria-hidden="true"></span><div><strong>Full-body track</strong><small>FUTURE PRODUCT FILM / IMAGE</small></div></div><span class="media-status">PLACEHOLDER</span></div><div class="media-placeholder media-wide" aria-label="Overhead reveal media placeholder"><div class="placeholder-grid"></div><div class="frame-corners"></div><span class="media-index">04</span><div class="media-copy"><span class="play-dot" aria-hidden="true"></span><div><strong>Overhead reveal</strong><small>FUTURE PRODUCT FILM / IMAGE</small></div></div><span class="media-status">PLACEHOLDER</span></div></div></section><section class="principles section-pad" id="principles"><div class="principle-visual" aria-hidden="true"><div class="privacy-core"><span>LOCAL</span><strong>AI</strong></div><i class="privacy-ring ring-a"></i><i class="privacy-ring ring-b"></i><i class="privacy-ring ring-c"></i></div><div class="principle-copy"><p class="section-kicker">Private means private</p><h2>Your set.<br/>Your footage.<br/><span>Your control.</span></h2><p>Designed for spaces where trust matters. Scene intelligence runs locally, storage is encrypted, and recording is always visible.</p><ul><li><span>01</span> No automatic cloud upload</li><li><span>02</span> Visible, non-disableable recording light</li><li><span>03</span> Encrypted local storage</li><li><span>04</span> One-touch stop and secure delete</li></ul></div></section><section class="safety-strip"><p class="section-kicker">Close by. Never careless.</p><div class="safety-points"><span><b>360°</b> protected propellers</span><span><b>&lt; 1s</b> emergency stop</span><span><b>Always</b> minimum face distance</span><span><b>Auto</b> land on tracking loss</span></div></section><section class="landing-market section-pad" id="marketplace"><div class="landing-market-heading"><div><p class="section-kicker">DS Cinema marketplace</p><h2>Choose your<br/>camera crew.</h2></div><div><p>Two creator systems. One autonomous directing platform. Configure your camera for the way you work.</p><a href="./shop/">View the marketplace <span>↗</span></a></div></div><div class="landing-product-grid"><article class="landing-product-card"><div class="product-visual product-visual-cyan product-visual-compact" aria-hidden="true"><div class="product-orbit"></div><div class="product-drone"><i class="product-rotor pr-one"></i><i class="product-rotor pr-two"></i><i class="product-rotor pr-three"></i><i class="product-rotor pr-four"></i><span class="product-arm pa-one"></span><span class="product-arm pa-two"></span><b><em></em></b></div><span class="product-visual-label">PRODUCT VISUAL / PLACEHOLDER</span></div><div class="landing-product-info"><p>Creator edition</p><h3>Creator Air</h3><span>The essential autonomous indoor camera.</span><div><b>€499.00</b><small>excl. VAT</small><a href="./shop/creator-air/">Configure <i>↗</i></a></div></div></article><article class="landing-product-card"><div class="product-visual product-visual-violet product-visual-compact" aria-hidden="true"><div class="product-orbit"></div><div class="product-drone"><i class="product-rotor pr-one"></i><i class="product-rotor pr-two"></i><i class="product-rotor pr-three"></i><i class="product-rotor pr-four"></i><span class="product-arm pa-one"></span><span class="product-arm pa-two"></span><b><em></em></b></div><span class="product-visual-label">PRODUCT VISUAL / PLACEHOLDER</span></div><div class="landing-product-info"><p>Studio favourite</p><h3>Creator Air Pro</h3><span>More light, more range, more control.</span><div><b>€799.00</b><small>excl. VAT</small><a href="./shop/creator-air-pro/">Configure <i>↗</i></a></div></div></article></div><p class="market-prototype-note">Prototype preorder experience · No live payment is collected yet · Specifications and delivery dates are provisional</p></section><section class="pilot section-pad" id="pilot"><div class="pilot-copy"><p class="section-kicker">Early flight program / 2026</p><h2>Help shape the first<br/>autonomous camera crew.</h2><p>We&#x27;re inviting a small group of creators, studios, and production partners to test the system and influence what we build next.</p></div><div class="pilot-form-wrap"><form class="pilot-form"><label for="email">Email address</label><div class="input-row"><input id="email" type="email" required="" placeholder="you@studio.com" autoComplete="email" name="email"/><button type="submit">Request access <span>↗</span></button></div><label for="role">I&#x27;m joining as</label><select id="role" name="role"><option value="creator" selected="">Independent creator</option><option value="studio">Studio or agency</option><option value="investor">Investor or partner</option><option value="other">Something else</option></select><p>Prototype program updates only. No spam. Unsubscribe any time.</p></form></div></section><footer><a class="brand footer-brand" href="#top"><span class="brand-mark">DS</span><span>cinema</span></a><p>Autonomous cinematography<br/>for independent creators.</p><div class="footer-links"><a href="#system">System</a><a href="#workflow">How it works</a><a href="#principles">Privacy</a><a href="./shop/">Marketplace</a><a href="./account/">My orders</a></div><p class="copyright">© 2026 DS Cinema. Concept in development.</p></footer></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>DS Cinema — Investor Story</title>
+  <meta name="description" content="The autonomous camera operator for solo creators. A privacy-first DS Cinema investor story.">
+  <meta property="og:title" content="DS Cinema — The autonomous camera operator">
+  <meta property="og:description" content="Privacy-first AI cinematography. No crew. No cloud upload.">
+  <meta property="og:image" content="https://dscinema.hawkfranklin.in/assets/og.png">
+  <meta property="og:url" content="https://dscinema.hawkfranklin.in/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://dscinema.hawkfranklin.in/">
+  <link rel="icon" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./assets/investor-scroll.css">
+  <script defer src="./assets/investor-scroll.js"></script>
+  <noscript><style>.deck-reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<div class="deck-page">
+<header class="deck-topbar deck-tone-0">
+<button class="deck-brand" type="button" aria-label="Go to cover">
+<img class="deck-brand-logo" src="./assets/ds-logo-mark.png" alt="" width="46" height="31">
+<span class="deck-brand-word">cinema</span>
+</button>
+<nav class="deck-progress" aria-label="Presentation sections">
+<button class="active" type="button" aria-label="Go to Cover" aria-current="step">
+<span>
+</span>
+</button>
+<button type="button" aria-label="Go to Problem">
+<span>
+</span>
+</button>
+<button type="button" aria-label="Go to Why now">
+<span>
+</span>
+</button>
+<button type="button" aria-label="Go to Current hardware">
+<span>
+</span>
+</button>
+<button type="button" aria-label="Go to The gap">
+<span>
+</span>
+</button>
+<button type="button" aria-label="Go to Solution">
+<span>
+</span>
+</button>
+<button type="button" aria-label="Go to First shots">
+<span>
+</span>
+</button>
+<button type="button" aria-label="Go to Business and ask">
+<span>
+</span>
+</button>
+</nav>
+<span class="deck-counter" aria-live="polite">01 / 08</span>
+</header>
+<aside class="deck-actions" aria-label="Presentation actions">
+<button type="button" aria-label="Share this presentation" title="Share">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<circle cx="18" cy="5" r="3">
+</circle>
+<circle cx="6" cy="12" r="3">
+</circle>
+<circle cx="18" cy="19" r="3">
+</circle>
+<path d="m8.7 10.6 6.6-4.1m-6.6 6.9 6.6 4.1">
+</path>
+</svg>
+</button>
+<a href="mailto:contact@hawkfranklin.in?subject=DS%20Cinema%20pilot" aria-label="Email the DS Cinema team" title="Contact">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<rect x="3" y="5" width="18" height="14" rx="2">
+</rect>
+<path d="m3 7 9 6 9-6">
+</path>
+</svg>
+</a>
+</aside>
+<main class="deck-reel">
+<section class="deck-scene deck-cover is-active" aria-labelledby="cover-title">
+<div class="deck-grain">
+</div>
+<div class="deck-cover-stage" data-media-slot="cover-video">
+<div class="deck-room-lines">
+</div>
+<div class="deck-tripod" aria-hidden="true">
+<i>
+</i>
+<span>
+</span>
+<b>
+</b>
+</div>
+<div class="deck-person" aria-hidden="true">
+<i>
+</i>
+<span>
+</span>
+</div>
+<div class="deck-flight-path" aria-hidden="true">
+<span>SAFE PATH 01</span>
+</div>
+<div class="deck-drone" aria-hidden="true">
+<span class="deck-drone-axis axis-a">
+</span>
+<span class="deck-drone-axis axis-b">
+</span>
+<i class="deck-rotor rotor-a">
+</i>
+<i class="deck-rotor rotor-b">
+</i>
+<i class="deck-rotor rotor-c">
+</i>
+<i class="deck-rotor rotor-d">
+</i>
+<b>
+<em>
+</em>
+</b>
+</div>
+<div class="deck-focus-frame" aria-hidden="true">
+<span>SUBJECT / LOCKED</span>
+</div>
+</div>
+<div class="deck-scene-inner deck-cover-copy">
+<p class="deck-kicker deck-reveal">Autonomous indoor cinematography</p>
+<h1 id="cover-title" class="deck-reveal">Your camera<br/>operator is<br/>
+<em>in the air.</em>
+</h1>
+<p class="deck-lede deck-reveal">Privacy-first AI cinematography for solo creators.</p>
+<div class="deck-cover-points deck-reveal">
+<span>No crew</span>
+<span>No cloud upload</span>
+<span>No static frame</span>
+</div>
+<button class="deck-scroll-cue deck-reveal" type="button" aria-label="Continue to the problem">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M12 3v17M5 13l7 7 7-7">
+</path>
+</svg>
+<span>Scroll the story</span>
+</button>
+</div>
+</section>
+<section class="deck-scene deck-problem " aria-labelledby="problem-title">
+<div class="deck-scene-inner deck-split-layout">
+<div class="deck-copy-block">
+<p class="deck-kicker deck-reveal">01 / The problem</p>
+<h2 id="problem-title" class="deck-reveal">Solo creators are still filming like it is <em>2016.</em>
+</h2>
+<p class="deck-lede deck-reveal">A tripod can hold a camera. It cannot compose, react, or direct.</p>
+<div class="deck-tag-row deck-reveal">
+<span>Static shots</span>
+<span>Repeated retakes</span>
+<span>No operator</span>
+</div>
+</div>
+<div class="deck-problem-visual deck-reveal" data-media-slot="problem-image">
+<span class="deck-visual-label">CURRENT WORKFLOW / LOOP</span>
+<div class="deck-phone-rig">
+<div class="deck-phone">
+<i>REC</i>
+<span>
+</span>
+</div>
+<div class="deck-tripod tripod-large">
+<i>
+</i>
+<span>
+</span>
+<b>
+</b>
+</div>
+</div>
+<div class="deck-adjusting-person">
+<i>
+</i>
+<span>
+</span>
+<b>
+</b>
+</div>
+<div class="deck-retake-loop">
+<strong>01</strong>
+<strong>02</strong>
+<strong>03</strong>
+<span>adjust → perform → check → repeat</span>
+</div>
+</div>
+</div>
+</section>
+<section class="deck-scene deck-now " aria-labelledby="now-title">
+<div class="deck-scene-inner deck-now-layout">
+<div class="deck-copy-block">
+<p class="deck-kicker deck-reveal">02 / Why now</p>
+<h2 id="now-title" class="deck-reveal">The creator economy is professionalizing.<br/>
+<em>The camera has not.</em>
+</h2>
+</div>
+<div class="deck-now-split deck-reveal" data-media-slot="why-now-split-image">
+<div class="deck-setup-half">
+<span>SOLO SETUP</span>
+<div class="deck-mini-phone">
+</div>
+<div class="deck-light-stick">
+</div>
+<small>one person<br/>one fixed angle</small>
+</div>
+<div class="deck-studio-half">
+<span>STUDIO EXPECTATION</span>
+<div class="deck-studio-rig">
+<i>
+</i>
+<i>
+</i>
+<b>
+</b>
+</div>
+<small>movement<br/>coverage<br/>continuity</small>
+</div>
+</div>
+<div class="deck-market-metrics deck-reveal">
+<div>
+<strong>$7.2B</strong>
+<span>creator payments processed in 2024</span>
+</div>
+<div>
+<strong>4.6M</strong>
+<span>reported creator accounts</span>
+</div>
+<small>Reported figures from Fenix International’s 2024 financial reporting.</small>
+</div>
+</div>
+</section>
+<section class="deck-scene deck-hardware " aria-labelledby="hardware-title">
+<div class="deck-scene-inner">
+<div class="deck-section-heading">
+<div>
+<p class="deck-kicker deck-reveal">03 / Current hardware</p>
+<h2 id="hardware-title" class="deck-reveal">Self-flying cameras proved <em>the category.</em>
+</h2>
+</div>
+<p class="deck-lede deck-reveal">Palm launch, subject tracking, obstacle sensing and controller-free capture are already understood by consumers.</p>
+</div>
+<div class="deck-hardware-grid">
+<article class="deck-device-card deck-reveal">
+<span class="deck-card-index">A / CATEGORY BENCHMARK</span>
+<div class="deck-device-orbit">
+<div class="deck-drone deck-drone-small" aria-hidden="true">
+<span class="deck-drone-axis axis-a">
+</span>
+<span class="deck-drone-axis axis-b">
+</span>
+<i class="deck-rotor rotor-a">
+</i>
+<i class="deck-rotor rotor-b">
+</i>
+<i class="deck-rotor rotor-c">
+</i>
+<i class="deck-rotor rotor-d">
+</i>
+<b>
+<em>
+</em>
+</b>
+</div>
+</div>
+<h3>DJI Neo 2</h3>
+<p>Palm-sized follow-me capture</p>
+<ul>
+<li>Gesture control</li>
+<li>ActiveTrack</li>
+<li>Obstacle sensing</li>
+</ul>
+</article>
+<article class="deck-device-card deck-device-card-light deck-reveal">
+<span class="deck-card-index">B / CATEGORY BENCHMARK</span>
+<div class="deck-device-orbit deck-device-square">
+<div class="deck-drone deck-drone-small" aria-hidden="true">
+<span class="deck-drone-axis axis-a">
+</span>
+<span class="deck-drone-axis axis-b">
+</span>
+<i class="deck-rotor rotor-a">
+</i>
+<i class="deck-rotor rotor-b">
+</i>
+<i class="deck-rotor rotor-c">
+</i>
+<i class="deck-rotor rotor-d">
+</i>
+<b>
+<em>
+</em>
+</b>
+</div>
+</div>
+<h3>HOVERAir</h3>
+<p>Controller-free flying camera</p>
+<ul>
+<li>Automated modes</li>
+<li>Protected props</li>
+<li>Creator-first UX</li>
+</ul>
+</article>
+<div class="deck-proof-stamp deck-reveal">
+<span>PROVEN</span>
+<small>People will trust a camera that flies itself.</small>
+</div>
+</div>
+</div>
+</section>
+<section class="deck-scene deck-gap " aria-labelledby="gap-title">
+<div class="deck-scene-inner deck-gap-layout">
+<div class="deck-copy-block">
+<p class="deck-kicker deck-reveal">04 / The gap</p>
+<h2 id="gap-title" class="deck-reveal">They follow you.<br/>
+<em>They do not direct you.</em>
+</h2>
+<p class="deck-lede deck-reveal">The unclaimed position is safe, autonomous direction inside the creator’s room.</p>
+</div>
+<div class="deck-position-map deck-reveal" role="img" aria-label="Market position map from outdoor follow-me to indoor cinematography and manual shots to AI-directed shots">
+<span class="deck-axis-label axis-top">AI-DIRECTED SHOTS</span>
+<span class="deck-axis-label axis-bottom">MANUAL SHOTS</span>
+<span class="deck-axis-label axis-left">OUTDOOR FOLLOW-ME</span>
+<span class="deck-axis-label axis-right">INDOOR CINEMATOGRAPHY</span>
+<div class="deck-map-grid">
+</div>
+<span class="deck-map-dot dot-dji">DJI</span>
+<span class="deck-map-dot dot-hover">HOVERAIR</span>
+<span class="deck-map-dot dot-tripod">TRIPOD</span>
+<span class="deck-map-dot dot-ds">
+<b>DS</b>
+<small>THE WHITE SPACE</small>
+</span>
+</div>
+</div>
+</section>
+<section class="deck-scene deck-solution " aria-labelledby="solution-title">
+<div class="deck-scene-inner deck-solution-layout">
+<div class="deck-copy-block">
+<p class="deck-kicker deck-reveal">05 / The solution</p>
+<h2 id="solution-title" class="deck-reveal">A privacy-first AI director for <em>indoor creator shoots.</em>
+</h2>
+<div class="deck-three-words deck-reveal">
+<span>Scan room.</span>
+<span>Choose shot.</span>
+<span>Record safely.</span>
+</div>
+<p class="deck-privacy-note deck-reveal">
+<i>
+</i> Raw footage stays on the creator’s devices by default.</p>
+</div>
+<div class="deck-ecosystem deck-reveal" data-media-slot="product-ecosystem-mockup">
+<div class="deck-eco-drone">
+<span>01 / CAMERA</span>
+<div class="deck-drone deck-drone-small" aria-hidden="true">
+<span class="deck-drone-axis axis-a">
+</span>
+<span class="deck-drone-axis axis-b">
+</span>
+<i class="deck-rotor rotor-a">
+</i>
+<i class="deck-rotor rotor-b">
+</i>
+<i class="deck-rotor rotor-c">
+</i>
+<i class="deck-rotor rotor-d">
+</i>
+<b>
+<em>
+</em>
+</b>
+</div>
+</div>
+<div class="deck-data-line line-one">
+<i>
+</i>
+</div>
+<div class="deck-eco-phone">
+<span class="phone-island">
+</span>
+<div class="phone-preview">
+<i>
+</i>
+<b>WIDE ARC</b>
+</div>
+<small>02 / CONTROL</small>
+</div>
+<div class="deck-data-line line-two">
+<i>
+</i>
+</div>
+<div class="deck-eco-laptop">
+<div>
+<span class="pose-head">
+</span>
+<i class="pose-body">
+</i>
+<b>LOCAL AI</b>
+</div>
+<small>03 / DIRECTION</small>
+</div>
+<span class="deck-local-loop">LOCAL NETWORK / ENCRYPTED</span>
+</div>
+</div>
+</section>
+<section class="deck-scene deck-shots " aria-labelledby="shots-title">
+<div class="deck-scene-inner">
+<div class="deck-section-heading">
+<div>
+<p class="deck-kicker deck-reveal">06 / Product</p>
+<h2 id="shots-title" class="deck-reveal">Three autonomous shots <em>to start.</em>
+</h2>
+</div>
+<p class="deck-lede deck-reveal">Deterministic paths. AI-assisted framing. Human-controlled start and stop.</p>
+</div>
+<div class="deck-shot-grid">
+<article class="deck-shot-card deck-reveal">
+<span>01</span>
+<div class="deck-room-diagram">
+<i class="subject-dot">
+</i>
+<b class="path-arc">
+</b>
+<em class="camera-dot cam-arc">
+</em>
+</div>
+<h3>Wide arc</h3>
+<p>Add controlled motion while maintaining a safe radius.</p>
+</article>
+<article class="deck-shot-card deck-reveal">
+<span>02</span>
+<div class="deck-room-diagram">
+<i class="subject-dot">
+</i>
+<b class="path-slide">
+</b>
+<em class="camera-dot cam-slide">
+</em>
+</div>
+<h3>Lateral slide</h3>
+<p>Move parallel to the subject for steady profile coverage.</p>
+</article>
+<article class="deck-shot-card deck-reveal">
+<span>03</span>
+<div class="deck-room-diagram diagram-reveal">
+<i class="subject-dot">
+</i>
+<b class="path-reveal">
+</b>
+<em class="camera-dot cam-reveal">
+</em>
+</div>
+<h3>Elevated reveal</h3>
+<p>Pull back and rise into a cinematic environmental frame.</p>
+</article>
+</div>
+<div class="deck-safety-line deck-reveal">
+<span>LOCAL POSE</span>
+<i>
+</i>
+<span>DEPTH SENSING</span>
+<i>
+</i>
+<span>SAFE VOLUME</span>
+<i>
+</i>
+<span>USER OVERRIDE</span>
+</div>
+</div>
+</section>
+<section class="deck-scene deck-ask " aria-labelledby="ask-title">
+<div class="deck-grain">
+</div>
+<div class="deck-scene-inner deck-ask-layout">
+<div class="deck-copy-block">
+<p class="deck-kicker deck-reveal">07 / Business + ask</p>
+<h2 id="ask-title" class="deck-reveal">Start where filming alone is already <em>a business.</em>
+</h2>
+<p class="deck-lede deck-reveal">Beachhead: premium solo creators.<br/>Expansion: every creator studio.</p>
+<a class="deck-contact-cta deck-reveal" href="mailto:contact@hawkfranklin.in?subject=DS%20Cinema%20pilot%20or%20investment">Build the first 30 with us <span>↗</span>
+</a>
+</div>
+<div class="deck-funnel deck-reveal">
+<div class="funnel-top">
+<span>BEACHHEAD</span>
+<strong>Subscription creators · Cam studios · Creator agencies</strong>
+</div>
+<div class="funnel-mid">
+<span>EXPANSION</span>
+<strong>Fitness · Dance · Fashion · Education · Livestreaming</strong>
+</div>
+<div class="funnel-core">
+<span>THE PLATFORM</span>
+<strong>Autonomous cinematography</strong>
+</div>
+</div>
+<div class="deck-ask-panel deck-reveal">
+<span>SEEKING NOW</span>
+<div>
+<strong>Pilot partners</strong>
+<strong>Supplier quotes</strong>
+<strong>Pre-seed capital</strong>
+</div>
+<p>Milestone: 30 controlled prototypes before VENUS Berlin 2026.</p>
+<b>22—25 OCT / BERLIN</b>
+</div>
+<footer class="deck-footer">
+<span>DS Cinema × HawkFranklin Research</span>
+<span>Concept deck / July 2026</span>
+</footer>
+</div>
+</section>
+</main>
+<div class="deck-toast " role="status" aria-live="polite">Link copied</div>
+</div>
+</body>
+</html>
